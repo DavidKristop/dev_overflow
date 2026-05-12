@@ -20,19 +20,26 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
 
     return (
         <html lang="en" suppressHydrationWarning>
-        <body className="min-h-screen bg-background font-sans antialiased">
-        <SessionProvider session={session}>
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-            >
-                {children}
-                <Toaster />
-            </ThemeProvider>
-        </SessionProvider>
-        </body>
+            <head>
+                <link rel="stylesheet"
+                      type='text/css'
+                      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+                />
+            </head>
+
+            <body className="min-h-screen bg-background font-sans antialiased">
+            <SessionProvider session={session}>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    {children}
+                    <Toaster />
+                </ThemeProvider>
+            </SessionProvider>
+            </body>
         </html>
     );
 };
