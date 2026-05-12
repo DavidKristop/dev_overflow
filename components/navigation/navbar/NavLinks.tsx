@@ -24,7 +24,6 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
                 const LinkComponent = (
                     <Link
                         href={item.route}
-                        key={item.label}
                         className={cn(isActive ? 'primary-gradient rounded-lg text-light' : 'text-dark300_light900', "flex items-center justify-start gap-4 bg-transparent p-4")}
                     >
                         <Image
