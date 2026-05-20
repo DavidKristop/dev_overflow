@@ -11,7 +11,7 @@ const LeftSidebar = () => {
                 <NavLinks />
             </div>
 
-            <div className="flex flex-col gap-5 pt-4 justify-center">
+            <div className="flex flex-col gap-5 pt-6 justify-center items-end">
                 <Button className="small-medium btn-secondary min-h-[41px] w-[90%] rounded-lg px-4 py-3 shadow-none mx-5" asChild>
                     <Link href={ROUTES.SIGN_IN}>
                         <Image
